@@ -44,5 +44,6 @@ cors_proxy.createServer({
     xfwd: false,
   },
 }).listen(port, host, function() {
+  console.log(parseEnvList(process.env.CORSANYWHERE_WHITELIST));
   console.log('Running CORS Anywhere on ' + host + ':' + port);
 });
